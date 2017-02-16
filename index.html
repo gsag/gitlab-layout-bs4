@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>Estudo GitLab Sidebar</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+
+<body>
+	<section id="site-wrapper">
+		<aside id="sidebar-wrapper" class="transitional">
+			<div class="brand transitional">
+				<div class="logo-picture">
+					<img width="36" height="34" id="tanuki-logo" src="tanuki-logo.png" alt="logo" />
+				</div>
+				<h4 class="logo-text align-middle pl-2">GitLab</h4>
+			</div>
+			<nav class="nav-sidebar" role="navigation">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link transitional active" href="#">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<span>Projects</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link transitional" href="#">
+							<i class="fa fa-bell" aria-hidden="true"></i>
+							<span>Todos</span>
+							<span class="badge badge-default float-right">0</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link transitional" href="#">
+							<i class="fa fa-dashboard" aria-hidden="true"></i>
+							<span>Activity</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link transitional" href="#">
+							<i class="fa fa-group" aria-hidden="true"></i>
+							<span>Groups</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link transitional" href="#">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<span>Milestones</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link transitional" href="#">
+							<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+							<span>Issues</span>
+							<span class="badge badge-default float-right">0</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link transitional" href="#">
+							<i class="fa fa-tasks" aria-hidden="true"></i>
+							<span>Merge Requests</span>
+							<span class="badge badge-default float-right">0</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link transitional" href="#">
+							<i class="fa fa-clipboard" aria-hidden="true"></i>
+							<span>Snippets</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link transitional" href="#">
+							<i class="fa fa-question-circle" aria-hidden="true"></i>
+							<span>Help</span>
+						</a>
+					</li>
+					<li class="nav-item-separator"></li>
+					<li class="nav-item">
+						<a class="nav-link transitional" href="#">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<span>Profile Settings</span>
+						</a>
+					</li>
+					<!-- absolute nav-items at bottom -->
+					<li class="nav-item abs item-avatar">
+						<a class="nav-link transitional" href="#">
+							<img alt="Profile" class="avatar rounded-circle" 
+								src="http://www.gravatar.com/avatar/efb316718eeab225729cdbe9f35bb42e?s=120&amp;d=identicon">
+							<span>gsag</span>
+						</a>
+					</li>
+					<li class="nav-item abs item-collapse js-sidebar-collapse">
+						<a class="nav-link transitional text-center" href="#" title="Open/Close">							
+							<i class="fa fa-angle-left" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>								
+			</nav>		
+		</aside>
+
+		<header class="navbar navbar-toggleable-sm navbar-light navbar-gitlab transitional" role="navigation">
+			<button class="navbar-toggler navbar-toggler-right mt-1" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</button>
+			<div class="breadcrumb-wrapper">				
+				<ol class="breadcrumb">			  
+					<li class="breadcrumb-item"><span>Projects</span></li>
+					<li class="breadcrumb-item"><span>Repository</span></li>
+				</ol>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbarToggler">
+				<ul class="navbar-top-links navbar-nav ml-auto mt-2 mt-md-0">
+					<li class="nav-item transitional">
+						<a class="nav-link hidden-md-down" href="#" data-toggle="tooltip" data-placement="bottom" title="Todos">
+							<i class="fa fa-bell fa-lg transitional" aria-hidden="true"></i>
+							<span class="hidden-md-up">Todos</span>
+						</a>
+						<a class="nav-link hidden-md-up" href="#">
+							<i class="fa fa-bell fa-lg transitional" aria-hidden="true"></i>
+							<span class="hidden-md-up">Todos</span>
+						</a>
+					</li>
+					<li class="nav-item transitional">
+						<a class="nav-link hidden-md-down" href="#" data-toggle="tooltip" data-placement="bottom" title="New Project">
+							<i class="fa fa-plus fa-lg transitional" aria-hidden="true"></i>
+							<span class="hidden-md-up">New Project</span>
+						</a>
+						<a class="nav-link hidden-md-up" href="#">
+							<i class="fa fa-plus fa-lg transitional" aria-hidden="true"></i>
+							<span class="hidden-md-up">New Project</span>
+						</a>
+					</li>
+					<li class="nav-item transitional">
+						<a class="nav-link hidden-md-down" href="#" data-toggle="tooltip" data-placement="bottom" title="Sign out">
+							<i class="fa fa-sign-out fa-lg transitional" aria-hidden="true"></i>
+							<span class="hidden-md-up">Sign out</span>
+						</a>
+						<a class="nav-link hidden-md-up" href="#">
+							<i class="fa fa-sign-out fa-lg transitional" aria-hidden="true"></i>
+							<span class="hidden-md-up">Sign out</span>
+						</a>
+					</li>					
+				</ul>
+			</div>
+		</header>
+
+		<section id="page-wrapper" class="transitional">
+			<div class="container-fluid fill">
+				<div class="card text-center">
+				  <div class="card-header">
+					GitLab layout with Bootstrap 4
+				  </div>
+				  <div class="card-block">
+					<h4 class="card-title">This is a template...</h4>
+					<p class="card-text">For studies about web design and Bootstrap 4.</p>					
+				  </div>				  
+				</div>			
+			</div>
+		</section>
+	</section>
+	
+<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="plugins.js"></script>
+	<script src="scripts.js"></script>
+</body>
+</html>
