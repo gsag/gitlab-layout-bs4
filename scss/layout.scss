@@ -1,0 +1,233 @@
+/**
+* Author: Guilherme Alves, 2017
+* Gitlab layout with Bootstrap 4
+*/
+
+$white: #FFF;
+$lighter-gray: #F7F7F9;
+$light-gray: rgba(0,0,0,.125);
+$gray: #c5d0de;
+$medium-gray-links: #7f8fa4;
+$medium-gray: #333c47;
+$medium-gray-1: #4c4e54;
+$dark-gray: #2b333d;
+$dark-gray-2: #24272D;
+
+html, body, .fill { 
+    height: 100%;
+}
+
+#sidebar-wrapper{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 230px;
+	height: 100%;
+	background: $dark-gray;
+	overflow-y: auto;
+
+	&.collapsed{
+		width: 68px;
+	}
+}
+
+#page-wrapper{
+	margin: 15px 0 0 230px;
+
+	&.collapsed{
+		margin: 15px 0 0 68px;
+	}
+}
+
+.navbar-gitlab{
+	min-height: 59px;
+	border-bottom: 1px solid $light-gray;
+	margin-left: 230px;
+
+	&.collapsed{
+		margin-left: 68px;
+	}
+}
+
+.brand{
+	height: 58px;
+	width: 100%;
+	padding: 11px 0 11px 22px;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+	background-color: $medium-gray;
+	border-bottom: 1px solid $medium-gray;
+	z-index: 100;
+
+	&.brand.collapsed{
+		padding-left: 15px;
+	}
+
+	&:hover{
+		background-color: $dark-gray;
+	}
+
+	.logo-picture{
+		width: 50px;		
+	}
+
+	.logo-text{
+		color: $gray;
+		font-size: 18px;
+		line-height: 10px;
+		font-weight: normal;
+		margin:0;
+	}
+
+	.logo-picture, .logo-text{
+		display: inline;	
+	}
+}
+
+.breadcrumb-wrapper{
+	display: inline;
+	min-width: 75%;
+}
+
+.breadcrumb {
+	margin:0;
+	padding: .45rem 1rem;
+	list-style: none;
+	background-color: transparent;
+	font-size: 18px;
+
+	li.breadcrumb-item {
+		> span{
+			color: $medium-gray-1;
+		}
+	}
+}
+
+.transitional{
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out; /* IE10 is actually unprefixed */
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.nav-sidebar ul > li.nav-item a.nav-link i,
+.navbar-top-links > li.nav-item i{
+	margin: 0 .5rem;
+	color: $gray;
+}
+
+.navbar-top-links{
+	> li.nav-item{
+		i, span{
+			color: $medium-gray-links;
+		}
+	}
+}
+
+.nav-sidebar ul > li.nav-item a.nav-link,
+.navbar-top-links > li.nav-item a.nav-link{
+	cursor: pointer;
+}
+
+.nav-sidebar{
+	ul{
+		> li.nav-item{
+			a.nav-link{
+				&:hover{
+					background-color: $dark-gray-2;
+				}
+
+				span{
+					color: $gray;
+					font-size: 14px;
+				}
+			}
+			.active{
+				background-color: $dark-gray-2;
+			}
+
+			a.active{
+				i, span{
+					color: $white;
+				}
+			}
+
+			&:first-child{
+				margin-top: 1rem;
+			}
+		}
+
+		li.nav-item-separator{
+			&::after{
+				content: "";
+			    display: block;
+			    width: 100%;
+			    background-color: $medium-gray;
+			    height: 1px;
+			    margin: .5rem 0;
+			}
+		}		
+	}
+}
+
+.abs{
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+
+	&.item-avatar{
+		background-color: $dark-gray;
+		bottom:40px;
+	}
+
+	&.item-collapse{
+		background-color: $medium-gray;
+		bottom:0;
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	.navbar-nav > li.nav-item{
+		padding-left: 1rem;	
+	}
+
+	.navbar-nav > li.nav-item:hover{
+		background-color: $lighter-gray;
+	}
+}
+
+.badge{
+	font-weight: normal;
+}
+
+.badge-default {
+    background-color: $dark-gray-2;
+}
+
+.avatar{
+	width: 36px;
+    height: 36px;
+    margin-right: 10px;
+}
+
+.hide{
+	display:none !important;
+}
+
+/* Scroll bar */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    border-radius: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
