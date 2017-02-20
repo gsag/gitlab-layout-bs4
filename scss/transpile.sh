@@ -1,1 +1,1 @@
-sass --watch layout.scss:../css/layout.css --style compressed
+sass --watch layout.scss:../css/layout.min.css --style compressed
